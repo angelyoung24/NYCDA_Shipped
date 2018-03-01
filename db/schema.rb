@@ -16,7 +16,17 @@ ActiveRecord::Schema.define(version: 20180301192908) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-ActiveRecord::Schema.define(version: 20180301173101) do
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "description"
+    t.string "origin"
+    t.string "destination"
+    t.integer "cost"
+    t.integer "container"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
