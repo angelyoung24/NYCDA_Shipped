@@ -5,11 +5,12 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  	<nav>
+  	<nav class="navbar">
   		<ul>
   			<li> <%= link_to "Home", root_path %></li>
   			<% if !user_signed_in? %>
@@ -25,8 +26,10 @@
   			<% end %>
   		</ul>
   	</nav>
-  	<p class="notice"><%= notice %></p>
+  	<p class="notice"><%= @notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
+
+
