@@ -10,6 +10,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @boats = Boat.all
   end
 
   # GET /jobs/new
@@ -24,8 +25,9 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
-
+    user = User.find(current_user.id)
+    @job = user.jobs.create(job_params)
+    # @job.user_id = user
     respond_to do |format|
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
@@ -61,6 +63,14 @@ class JobsController < ApplicationController
     end
   end
 
+  def assign  
+    @job = Job.find(params[:jobid])
+    @boat = Boat.find(params[:boatid])
+
+    @job.boats << @boat
+    redirect_to root_path
+
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job

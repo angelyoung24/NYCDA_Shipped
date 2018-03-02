@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180301214059) do
     t.string "destination"
     t.integer "cost"
     t.integer "containers"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
