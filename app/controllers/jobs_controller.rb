@@ -10,6 +10,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @boats = Boat.all
   end
 
   # GET /jobs/new
@@ -59,6 +60,15 @@ class JobsController < ApplicationController
       format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def assign
+    @job = Job.find(params[:job_id])
+    @boat = Boat.find(params[:boat_id])
+
+    @job.boats << @boat
+    redirect_to root_path
+
   end
 
   private
