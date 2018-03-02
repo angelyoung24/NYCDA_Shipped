@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.description %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @job.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @job.destination %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @job.cost %>
+</p>
+
+<p>
+  <strong>Containers:</strong>
+  <%= @job.containers %>
+</p>
+
+<p>
+  <strong>Boats:</strong>
+  <% @job.boats.each do |b| %>
+  <div><%= b.name %></div>
+  <% end %>
+</p>
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
+
+<hr>
+<% @boats.each do |t| %>
+<%= form_for :boat, url: {action: "assign", controller: "jobs"} do |r| %>
+<%= hidden_field_tag "boat_id", t.id %>
+<%= hidden_field_tag "job_id", @job.id %>
+<%= t.name %>
+<%= r.submit "Assign" %>
+<% end %>
+<% end %>

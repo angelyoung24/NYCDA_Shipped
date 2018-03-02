@@ -28,7 +28,8 @@ class BoatsController < ApplicationController
 
     respond_to do |format|
       if @boat.save
-        format.html { redirect_to @boat, notice: 'Boat was successfully created.' }
+        flash[:notice] = 'Boat was successfully created.'
+        format.html { redirect_to @boat}
         format.json { render :show, status: :created, location: @boat }
       else
         format.html { render :new }
@@ -42,7 +43,8 @@ class BoatsController < ApplicationController
   def update
     respond_to do |format|
       if @boat.update(boat_params)
-        format.html { redirect_to @boat, notice: 'Boat was successfully updated.' }
+        flash[:notice] = 'Boat was successfully updated.'
+        format.html { redirect_to @boat}
         format.json { render :show, status: :ok, location: @boat }
       else
         format.html { render :edit }
@@ -56,7 +58,8 @@ class BoatsController < ApplicationController
   def destroy
     @boat.destroy
     respond_to do |format|
-      format.html { redirect_to boats_url, notice: 'Boat was successfully destroyed.' }
+      flash[:notice] = 'Boat was successfully destroyed.'
+      format.html { redirect_to boats_url}
       format.json { head :no_content }
     end
   end
