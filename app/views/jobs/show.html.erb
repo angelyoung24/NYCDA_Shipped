@@ -25,21 +25,7 @@
   <%= @job.containers %>
 </p>
 
-<p>
-  <strong>Boats:</strong>
-  <% @job.boats.each do |b| %>
-  <div><%= b.name %></div>
-  <% end %>
-</p>
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
 
-<hr>
-<% @boats.each do |t| %>
-<%= form_for :boat, url: {action: "assign", controller: "jobs"} do |r| %>
-<%= hidden_field_tag "boat_id", t.id %>
-<%= hidden_field_tag "job_id", @job.id %>
-<%= t.name %>
-<%= r.submit "Assign" %>
-<% end %>
-<% end %>
+<h1>Code below</h1>
