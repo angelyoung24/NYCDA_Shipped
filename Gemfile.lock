@@ -210,8 +210,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.0.0)
-  bootstrap-sass (~> 3.3.7)
+  bootstrap
+  bootstrap-sass
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
