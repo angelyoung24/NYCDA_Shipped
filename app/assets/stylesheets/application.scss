@@ -34,21 +34,13 @@ img{
 .primary-text{
   color:#56a79a;
 }
-/* Testing */
-// this is a comment
 
 .primary-background{
   background:#56a79a;
-  padding: center;
 }
 
 .test-class{
   color: blue;
-}
-
-/* HEADER */
-#main-header{
-  border-bottom:1px solid #56a79a;
 }
 
 /* NAVBAR */
@@ -74,8 +66,6 @@ img{
   padding-bottom:3px;
 }
 
-
-
 /* SHOWCASE */
 #showcase{
   background: url("cargo-ship.jpg");
@@ -90,7 +80,7 @@ img{
 #showcase h1{
   font-size:50px;
   margin:0;
-  padding-bottom:20px;
+  padding-bottom: 10px;
 }
 
 #showcase p{
@@ -106,3 +96,14 @@ img{
   opacity:0.9;
   text-align:center;
 }
+
+/* FOOTER */
+footer{
+  // padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #56a79a;
+  text-align: center; 
+}
+
+
