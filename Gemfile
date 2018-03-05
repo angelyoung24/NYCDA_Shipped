@@ -29,14 +29,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
-gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
 gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap'
 gem 'nokogiri'
-gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'flexbox-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
   <head>
     <title>NYCDAShipped</title>
     <%= csrf_meta_tags %>
@@ -6,29 +6,64 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  	<nav class="navbar">
-  		<ul>
-  			<li> <%= link_to "Home", root_path %></li>
-  			<% if !user_signed_in? %>
-  			<li> <%= link_to "Sign Up", new_user_registration_path %></li>
-  			<li><%= link_to "Login", new_user_session_path %></li>
-  			
-  			<% end %>
-  			<% if user_signed_in? %>
-  			<li><%= link_to "Create a Job", new_job_path %> </li>
-        <li><%= link_to "All Jobs", jobs_path %></li>
-  			<li><%= link_to "Edit Account", edit_user_registration_path %></li>
+    <!-- HEADER -->
+    <header id="main-header">
+      <div class="container">
+        <div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <h1><span class="primary-text">Shipping</span>Inc</h1>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+            <nav id="navbar">
+              <ul class="list">
+                <li> <%= link_to "Home", root_path %></li>
+                <% if !user_signed_in? %>
+                <li> <%= link_to "Sign Up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
+        
+                <% end %>
+                <% if user_signed_in? %>
+                <li><%= link_to "Create a Job", new_job_path %> </li>
+                <li><%= link_to "All Jobs", jobs_path %></li>
+                <li><%= link_to "Edit Account", edit_user_registration_path %></li>
 
-  			<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-        <li><%= link_to "My Boats", boats_path %> </li>
-        <li><%= link_to "Create a Boat", new_boat_path %></li>
-  			<% end %>
-  		</ul>
-  	</nav>
-  	<p class="notice"><%= @notice %></p>
-       <p class="alert"><%= alert %></p>
+                <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+                <li><%= link_to "My Boats", boats_path %> </li>
+                <li><%= link_to "Create a Boat", new_boat_path %></li>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SHOWCASE -->
+    <section id="showcase">
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-7 showcase-content">
+            <h1>Welcome to <span class="primary-text">Shipping Inc</span></h1>
+            <p>Your Shipping Site!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!--  Footer -->
+
+   
+
+
+
+
+
+
+
+
+    <p class="notice"><%= @notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
