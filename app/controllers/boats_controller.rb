@@ -32,6 +32,7 @@ class BoatsController < ApplicationController
         format.html { redirect_to @boat}
         format.json { render :show, status: :created, location: @boat }
       else
+        redirect_to root_path
         format.html { render :new }
         format.json { render json: @boat.errors, status: :unprocessable_entity }
       end
@@ -72,6 +73,6 @@ class BoatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boat_params
-      params.require(:boat).permit(:name)
+      params.require(:boat).permit(:name, :avatar)
     end
 end
