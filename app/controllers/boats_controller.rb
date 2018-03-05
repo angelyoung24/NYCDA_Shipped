@@ -1,6 +1,6 @@
 class BoatsController < ApplicationController
+  before_action :authenticate, only: [:index, :new, :edit, :show, :update, :destroy, :create]
   before_action :set_boat, only: [:show, :edit, :update, :destroy]
-
   # GET /boats
   # GET /boats.json
   def index
