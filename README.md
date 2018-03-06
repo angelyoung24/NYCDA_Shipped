@@ -1,24 +1,16 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Rails Blog
 
-Things you may want to cover:
+Created a shipping website using Ruby on Rails version 2.5.0
 
-* Ruby version
+Prerequisites We installed Devise gem to create Users and Paperclip to add/edit and render images.
+Flexbox-rails for sass.
 
-* System dependencies
+Authors Karen Mitchell, Charles Velazquez, Minghao Zhou, Angel Young - Initial work
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Acknowledgments
+guides.rubyonrails.org
+Ruby on Rails For Dummies by Barry A. Burd
+rubygems.org
+stackoverflow.com
