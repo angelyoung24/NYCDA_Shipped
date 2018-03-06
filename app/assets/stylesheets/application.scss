@@ -20,6 +20,8 @@
   line-height:1.5em;
   margin:0;
   padding:0;
+  background: #D3D3D3;
+  text-align: center;
 }
 
 img{
@@ -68,9 +70,11 @@ img{
 
 /* SHOWCASE */
 #showcase{
-  background: url("cargo-ship.jpg");
+  background: url("cargo.jpeg");
   border-bottom:1px solid #56a79a;
   margin-bottom:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #showcase .row{
@@ -100,10 +104,11 @@ img{
 /* FOOTER */
 footer{
   // padding: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   color: #ffffff;
   background-color: #56a79a;
   text-align: center; 
+  padding: 20px;
 }
 
 
