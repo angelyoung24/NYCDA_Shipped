@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1af8fa7a-310a-406d-bbee-4bcb3ddf68ee/deploy-status)](https://app.netlify.com/sites/nycda-shipped/deploys)
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
