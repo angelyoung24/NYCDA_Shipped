@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+  font-family:'Open-sans', sans-serif;
+  font-size:17px;
+  line-height:1.5em;
+  margin:0;
+  padding:0;
+  background: #D3D3D3;
+  text-align: center;
+}
+
+img{
+  width:100%;
+}
+
+.container{
+  margin:auto;
+}
+
+/* COMMON CLASSES */
+.primary-text{
+  color:#56a79a;
+}
+
+.primary-background{
+  background:#56a79a;
+}
+
+.test-class{
+  color: blue;
+}
+
+/* NAVBAR */
+#navbar{
+  text-transform:uppercase;
+  text-align:center;
+}
+
+#navbar li{
+  display:inline;
+  padding-right:10px;
+  list-style:none;
+}
+
+#navbar a{
+  text-decoration:none;
+  color:#888;
+}
+
+#navbar li.current a, #navbar a:hover{
+  color:#56a79a;
+  border-bottom: 3px solid #56a79a;
+  padding-bottom:3px;
+}
+
+/* SHOWCASE */
+#showcase{
+  background: url("cargo.jpeg");
+  border-bottom:1px solid #56a79a;
+  margin-bottom:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#showcase .row{
+  height:600px;
+}
+
+#showcase h1{
+  font-size:50px;
+  margin:0;
+  padding-bottom: 10px;
+}
+
+#showcase p{
+  color:#ccc;
+  margin:0;
+}
+
+#showcase .showcase-content{
+  background:#333;
+  color:#fff;
+  border-radius:70px;
+  padding:20px;
+  opacity:0.9;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  // padding: 20px;
+  margin-top: 0px;
+  color: #ffffff;
+  background-color: #56a79a;
+  text-align: center; 
+  padding: 20px;
+}
+
+

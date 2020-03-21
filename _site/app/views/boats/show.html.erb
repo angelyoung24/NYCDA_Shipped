@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @boat.name %></strong>
+  <br>
+  <br>
+  <div>
+  	<%= image_tag @boat.avatar.url(:medium) %>
+  <br>
+  <%@boat.jobs.each do |j|%>
+  <strong>Jobs: </strong>
+	<div class="jobs">
+	Description: <%=j.description%><br>
+	Origin: <%=j.origin%><br>
+	Destination: <%=j.destination%><br>
+	Cost: <%=j.cost%><br>
+	Containers: <%=j.containers%><br>
+	</div>	
+	<%end%>
+  </div>
+</p>
+
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>
