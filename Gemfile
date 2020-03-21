@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 gem 'devise'
 gem 'jekyll', '~> 4.0'
+gem 'bootstrap', '~> 4.4.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
